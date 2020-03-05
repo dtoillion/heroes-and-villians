@@ -5,7 +5,6 @@
         <q-toolbar-title>
           {{ $t('appTitle') }}
         </q-toolbar-title>
-        <q-space />
         <q-btn
           flat
           dense
