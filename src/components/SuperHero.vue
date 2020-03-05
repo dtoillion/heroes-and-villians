@@ -38,7 +38,28 @@
 
         <q-card-section horizontal>
           <q-card-section>
-            {{ $t('biographyFirstAppearanceLabel') }}: {{ hero.biography.firstAppearance }}
+            <q-list>
+              <!-- TODO: Styles for list and loop through arrays -->
+              <!-- TODO: Dutch translations for labels -->
+              <q-item>
+                {{ $t('biographyFullNameLabel') }}: {{ hero.biography.fullName }}
+              </q-item>
+              <q-item>
+                {{ $t('biographyFirstAppearanceLabel') }}: {{ hero.biography.firstAppearance }}
+              </q-item>
+              <q-item>
+                {{ $t('biographyAlterEgosLabel') }}: {{ hero.biography.alterEgos }}
+              </q-item>
+              <q-item>
+                {{ $t('biographyAliasesLabel') }}: {{ hero.biography.aliases }}
+              </q-item>
+              <q-item>
+                {{ $t('biographyPlaceOfBirthLabel') }}: {{ hero.biography.placeOfBirth }}
+              </q-item>
+              <q-item>
+                {{ $t('biographyAlignmentLabel') }}: {{ hero.biography.alignment }}
+              </q-item>
+            </q-list>
           </q-card-section>
         </q-card-section>
       </q-card>

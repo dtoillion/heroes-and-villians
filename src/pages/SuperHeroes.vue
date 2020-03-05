@@ -12,7 +12,7 @@
 import SuperHero from 'components/SuperHero';
 
 export default {
-  name: 'PageIndex',
+  name: 'SuperHeroesPage',
   data() {
     return {
       heroes: [],
@@ -22,6 +22,8 @@ export default {
     SuperHero,
   },
   methods: {
+    // TODO: Move the data model to the vuex store
+    // TODO: pagination? infinite scroll? loading them all is too slow
     loadHero() {
       this.$q.loading.show();
       this.$axios.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
@@ -40,7 +42,7 @@ export default {
         });
     },
   },
-  mounted() {
+  beforeMount() {
     this.loadHero();
   },
 };
