@@ -38,7 +38,7 @@
 
         <q-card-section horizontal>
           <q-card-section>
-            First appearance: {{ hero.biography.firstAppearance }}
+            {{ $t('biographyFirstAppearanceLabel') }}: {{ hero.biography.firstAppearance }}
           </q-card-section>
         </q-card-section>
       </q-card>

@@ -1,28 +1,28 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar class="bg-dark">
+      <q-toolbar class="bg-dark" style="height: 60px;">
+        <q-toolbar-title>
+          {{ $t('appTitle') }}
+        </q-toolbar-title>
+        <q-space />
         <q-btn
           flat
           dense
           round
           icon="settings"
           aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
+          @click="drawerOpen = !drawerOpen"
         />
-
-        <q-toolbar-title>
-          {{ $t('appTitle') }}
-        </q-toolbar-title>
-
       </q-toolbar>
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
+      v-model="drawerOpen"
       show-if-above
       :width="200"
       :breakpoint="400"
+      side="right"
     >
       <q-list padding>
         <q-item-label header>
@@ -33,7 +33,7 @@
         </q-item>
         <q-item tag="label" v-ripple>
           <q-item-section>
-            <q-item-label>Dark mode</q-item-label>
+            <q-item-label>{{ $t('darkModeToggleTitle') }}</q-item-label>
           </q-item-section>
           <q-item-section avatar>
             <q-toggle @input="toggleDarkMode()" v-model="darkMode" />
@@ -58,7 +58,7 @@ export default {
   },
   data() {
     return {
-      leftDrawerOpen: false,
+      drawerOpen: false,
       darkMode: true,
     };
   },

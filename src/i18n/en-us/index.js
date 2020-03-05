@@ -1,6 +1,7 @@
 export default {
   languageSwitcherLabel: 'Choose language',
-  characterSearchPlaceholder: 'Search...',
-  appTitle: 'Character Search',
+  appTitle: 'Heroes & Villians',
   settingsTitle: 'Settings',
+  darkModeToggleTitle: 'Dark mode',
+  biographyFirstAppearanceLabel: 'First appearance',
 };

@@ -1,4 +1,7 @@
 export default {
-  failed: 'Dutch Action failed',
-  success: 'Dutch Action was successful',
+  languageSwitcherLabel: 'Kies een taal',
+  appTitle: 'Helden en schurken',
+  settingsTitle: 'Instellingen',
+  darkModeToggleTitle: 'Donkere modus',
+  biographyFirstAppearanceLabel: 'Eerste verschijning',
 };
